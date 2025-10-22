@@ -1,0 +1,47 @@
+# === Python general ===
+__pycache__/
+*.py[cod]
+*.pyo
+*.pyd
+*.so
+*.egg
+*.egg-info/
+build/
+dist/
+.eggs/
+*.manifest
+*.spec
+
+# === Environment / virtualenv ===
+.env
+.venv/
+env/
+venv/
+ENV/
+Pipfile
+Pipfile.lock
+poetry.lock
+
+# === Streamlit ===
+.streamlit/
+.streamlit/secrets.toml
+.cache/
+__cache__/
+
+# === Logs ===
+*.log
+
+# === Jupyter / IPython ===
+.ipynb_checkpoints
+*.ipynb
+
+# === IDE / Editor files ===
+.vscode/
+.idea/
+*.swp
+*.swo
+*.bak
+
+# === macOS / Windows OS ===
+.DS_Store
+Thumbs.db
