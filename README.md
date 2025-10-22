@@ -15,7 +15,6 @@ The project combines financial market analysis and data visualization to provide
  
 ## Installation
 
-    ```bash
     # 1. Clone the repository
     git clone https://github.com/Pooranan11/Real-Time-Stock-Visualizer.git
     cd Real-Time-Stock-Visualizer
@@ -32,22 +31,20 @@ The project combines financial market analysis and data visualization to provide
     pip install -r requirements.txt
     # If the file does not exist:
     # pip install streamlit yfinance pandas numpy plotly ta
-    ```
+    
 
 ### Running the Application
     
-    ```bash
     streamlit run main.py
-    ```
 
 The app will automatically open in your browser at http://localhost:8501.
 
 ### Project Structure
 
-.
-├── main.py              # Streamlit entry point
-├── requirements.txt     # Dependencies
-└── README.md            # Documentation
+    .
+    ├── main.py              # Streamlit entry point
+    ├── requirements.txt     # Dependencies
+    └── README.md            # Documentation
 
 You can later refactor your code as follows:
 data_loader.py for data loading
