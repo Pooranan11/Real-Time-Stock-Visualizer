@@ -1,42 +1,93 @@
-# Real-Time-Stock-Visualizer
-This project allows you to see in real time the variation of your actions.
+# Real-Time Stock Visualizer
 
-Real-Time Stock Visualizer 📈 — Tutoriel complet (type “Prédiction S&P”)
-### Objectif
+# 🇬🇧 English Version
 
-Application Streamlit pour visualiser en quasi temps réel le cours d’un titre (ex. NVDA, AAPL, ^FCHI) et afficher des indicateurs techniques (SMA, EMA, RSI, Bandes de Bollinger, MACD). Idéal pour montrer une démarche data + marchés.
+## Objective
+This Streamlit web application allows users to visualize real-time stock market data with technical indicators such as SMA, EMA, RSI, Bollinger Bands, and MACD.  
+The project combines financial market analysis and data visualization to provide an interactive and dynamic overview of stock price movements.
 
-### Prérequis
+## Requirements
 
-Python 3.10+
-macOS / Linux / Windows
-Connexion internet (données Yahoo Finance via yfinance)
-(Optionnel) clé API si tu remplaces la source de données plus tard
+- Python 3.10 or higher  
+- Compatible with macOS, Linux, and Windows  
+- Internet connection (data retrieved using `yfinance`)  
+- Optional: API key for alternative data sources (e.g., AlphaVantage, Finnhub)
+ 
+## Installation
 
-### Installation
+    ```bash
+    # 1. Clone the repository
+    git clone https://github.com/Pooranan11/Real-Time-Stock-Visualizer.git
+    cd Real-Time-Stock-Visualizer
 
-# 1) Cloner le repo
+    # 2. Create a virtual environment
+    python -m venv .venv
+    # macOS/Linux
+    source .venv/bin/activate
+    # Windows (PowerShell)
+    # .venv\Scripts\Activate.ps1
 
-  ```bash
-  git clone https://github.com/<TON-USER>/<TON-REPO>.git
-  cd <TON-REPO>
-  ```
+    # 3. Install dependencies
+    pip install --upgrade pip
+    pip install -r requirements.txt
+    # If the file does not exist:
+    # pip install streamlit yfinance pandas numpy plotly ta
+    ```
 
-# 2) Créer l'environnement virtuel
-  
-  ```bash
-  python -m venv .venv
-  # macOS/Linux
-  source .venv/bin/activate
-  # Windows (PowerShell)
-  # .venv\Scripts\Activate.ps1
-  ```
+### Running the Application
+    
+    ```bash
+    streamlit run main.py
+    ```
 
-# 3) Installer les dépendances
-  
-  ```bash
-  pip install --upgrade pip
-  pip install -r requirements.txt
-  # si pas de requirements.txt, par défaut :
-  # pip install streamlit yfinance pandas numpy matplotlib ta plotly
-  ```
+The app will automatically open in your browser at http://localhost:8501.
+
+### Project Structure
+
+.
+├── main.py              # Streamlit entry point
+├── requirements.txt     # Dependencies
+└── README.md            # Documentation
+
+You can later refactor your code as follows:
+data_loader.py for data loading
+indicators.py for indicator calculations
+ui_components.py for Streamlit interface elements
+
+Features
+1. **Data Loading**
+
+    Source: Yahoo Finance (yfinance)
+    Available periods: 1mo, 3mo, 6mo, 1y, 5y
+    Intervals: 5m, 15m, 30m, 1h, 1d
+    Automatic price adjustment
+
+2. **Technical Indicators**
+
+    SMA (Simple Moving Average)
+    EMA (Exponential Moving Average)
+    RSI (Relative Strength Index)
+    Bollinger Bands
+    MACD (optional)
+
+3. **Streamlit Interface**
+
+    Sidebar controls for ticker, period, and interval
+    Checkboxes for indicator selection
+    Interactive Plotly charts
+    Auto-refresh slider (0–300 seconds)
+
+### Deployment
+
+Streamlit Cloud
+Push the repository to GitHub (with requirements.txt).
+Log into https://share.streamlit.io.
+Connect your GitHub account and select main.py as the entry file.
+Deploy and retrieve your public link.
+
+
+### Author
+
+    V. Pooranan
+    Software Engineer | Data and Finance Enthusiast
+    GitHub: Pooranan11
